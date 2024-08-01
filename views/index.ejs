@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body class="bg-zinc-800 mx-4">
-    <form class="text-white" action="">
+    <form class="text-white" action="/create" method="POST">
       <input
         class="block w-full my-4 bg-zinc-500 outline-blue-500 rounded p-2 placeholder:text-yellow-100"
         name="title"
@@ -29,7 +29,7 @@
     <div class="flex flex-wrap tasks">
       <% if(files.length>0) { %> <% files.forEach((file)=> {%>
       <div class="task bg-zinc-700 text-white w-73 p-4 m-4">
-        <h1 class="w-full tracking-tighter text-3xl">Some task goes here...</h1>
+        <h1 class="w-full tracking-tighter text-3xl"><%= file %></h1>
         <a class="inline-block text-blue-400" href="">Read more...</a>
       </div>
       <%})%> <% } else { %>

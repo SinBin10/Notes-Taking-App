@@ -14,10 +14,10 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/:username/:age", (req, res) => {
-  res.send(
-    `Your name is ${req.params.username} and your age is ${req.params.age}`
-  );
+app.post("/create", (req, res) => {
+  fs.writeFile(`./files/${req.body.title}.txt`, req.body.details, () => {
+    res.redirect("/");
+  });
 });
 
 app.listen(3000);
