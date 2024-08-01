@@ -30,7 +30,9 @@
       <% if(files.length>0) { %> <% files.forEach((file)=> {%>
       <div class="task bg-zinc-700 text-white w-73 p-4 m-4">
         <h1 class="w-full tracking-tighter text-3xl"><%= file %></h1>
-        <a class="inline-block text-blue-400" href="">Read more...</a>
+        <a class="inline-block text-blue-400" href="/file/<%= file %>">
+          Read more...</a
+        >
       </div>
       <%})%> <% } else { %>
       <h3 class="mt-4 text-white">no task here.</h3>
