@@ -32,4 +32,14 @@ app.get("/delete/:filename", (req, res) => {
   });
 });
 
+app.get("/edit/:filename", (req, res) => {
+  res.render("edit", { filename: req.params.filename });
+});
+
+app.post("/changename", (req, res) => {
+  fs.rename(`files/${req.body.oldName}`, `files/${req.body.newName}`, () => {
+    res.redirect("/");
+  });
+});
+
 app.listen(3000);

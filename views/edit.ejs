@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/stylesheets/output.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body class="bg-zinc-700">
+    <form action="/changename" method="POST">
+      <input
+        class="block w-full m-4 p-2 text-3xl bg-zinc-600 text-yellow-100"
+        type="text"
+        name="oldName"
+        value="<%= filename %>"
+        readonly
+      />
+      <input
+        class="block w-full m-4 p-2 text-3xl bg-zinc-600 text-white"
+        type="text"
+        name="newName"
+      />
+      <input
+        class="m-4 px-2 py-1 rounded-lg text-white bg-blue-400"
+        type="submit"
+        value="submit"
+      />
+    </form>
+  </body>
+</html>
